@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body,
+app-root {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgb(117, 188, 255), rgb(13, 124, 208));
+}

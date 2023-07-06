@@ -1,0 +1,11 @@
+<div 
+  class="card" 
+  *ngIf="data" (click)="onClick()" 
+  [@cardFlip]="data.state" 
+  [style.pointer-events]="(disabled || data.state === 'matched' ? 'none':'unset')"
+>
+  <div class="face back">
+    <img src="assets/imgs/card_back.png" />
+  </div>
+  <div class="face front" [style.background-color]="data.color"></div>
+</div>

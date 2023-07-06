@@ -1,0 +1,67 @@
+:host{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card-grid {
+  display: grid;
+  grid-gap: 1.5vh;
+}
+
+.panel {
+  background-image: linear-gradient(rgb(31, 63, 111), rgb(11, 15, 62));
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2em;
+  margin: 1em 0em;
+
+  box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.75);
+
+  h1{
+    margin: 1em;
+  }
+  
+
+  .panel-content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0.2em;
+    width: 100%;
+    height: fit-content;
+    .score-holder {
+      padding: 0.5em;
+      margin: 0.5em;
+
+    }
+
+    .restart-btn {
+      color: inherit;
+      border: none;
+      border-radius: 0.5em;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 1em;
+      padding: 0.5em;
+      margin: 0.5em;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(32, 41, 77);
+      }
+
+      &:not(:hover) {
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}

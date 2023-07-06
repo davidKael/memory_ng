@@ -1,0 +1,30 @@
+
+<div *ngIf="!gameCompleted; else showGameCompletedText">
+  <div
+    class="card-grid"
+    [style.grid-template-columns]="'repeat(' + columns + ', 1fr)'"
+    [style.grid-template-rows]="'repeat(' + rows + ', 1fr)'"
+  >
+    <div class="card-holder" *ngFor="let card of cards">
+      <app-memory-card
+        [data]="card"
+        (cardFlipped)="newCardSelected($event)"
+        [disabled]="stopClicks"
+      ></app-memory-card>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="score-holder">Score: {{ score }}</div>
+  </div>
+</div>
+
+<ng-template #showGameCompletedText>
+  <div class="panel">
+    <h1>Game Solved</h1>
+    <div class="panel-content">
+      <div class="score-holder">Final Score: {{ score }}</div>
+      <button class="restart-btn" (click)="restart()">Again!</button>
+    </div>
+  </div>
+
+</ng-template>
