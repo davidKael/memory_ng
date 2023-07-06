@@ -1,4 +1,4 @@
 ## Development server
-Run `npm i`
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+- Run `npm i`
+- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
